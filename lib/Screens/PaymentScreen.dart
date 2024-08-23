@@ -74,7 +74,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
     });
     super.initState();
     if (Platform.isAndroid) {
-      productLists = ["com.stormdeve.car_radio.${widget.carName.toString()}"];
+      productLists = ["com.volkswagen.radio.${widget.carName.toString()}"];
     }
 
     // Stripay().pyinislize();
@@ -98,7 +98,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
   getpayment() async {
 // To find out if payment is available on this device
     var ch = await pay.checkPayments();
-    print("checkPayments $ch");
     // double am = widget.mainpagedata['amount'] * 100;
     // RegExp regex = RegExp(r'([.]*0)(?!.*\d)');
     //
@@ -110,7 +109,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
         PaymentNetwork.mastercard,
       ],
     );
-    print("checkActiveCard $ch1");
     try {
 // To pay with Apple Pay or Google Pay
       final PaymentResponse? response =
@@ -141,7 +139,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
       }
     } catch (e) {
       setState(() {
-        print('Error:\n$e');
       });
     }
     //print("payresponse ${data!.rawData}");
@@ -794,7 +791,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
   loadPayment() async {
     try {
       Map getToken = await PaypalServices().getAccessToken();
-      print("====TOKEN${getToken.toString()}");
       if (getToken['token'] != null) {
         var accessToken = getToken['token'];
         final transactions = getOrderParams();
@@ -806,7 +802,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
             var checkoutUrl = res["approvalUrl"].toString();
             var navUrl = res["approvalUrl"].toString();
             var executeUrl = res["executeUrl"].toString();
-            print("====${checkoutUrl}");
             buttonLoading = false;
             webViewController = WebViewController()
               ..setJavaScriptMode(JavaScriptMode.unrestricted)

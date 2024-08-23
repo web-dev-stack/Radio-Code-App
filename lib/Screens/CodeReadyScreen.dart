@@ -79,7 +79,6 @@ class _CodeReadyScreenState extends State<CodeReadyScreen> {
 
     if (request.statusCode == 200) {
       var vale = jsonDecode(request.body);
-      print("====${vale.last}");
       if (vale.last["code"] != "Admin send Code you later") {
         // Navigator.of(context).pop();
         radioCode = vale.last["code"];
@@ -96,7 +95,6 @@ class _CodeReadyScreenState extends State<CodeReadyScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(widget.radio);
     return WillPopScope(
       onWillPop: () async {
         Navigator.of(context).pop();

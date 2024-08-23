@@ -16,7 +16,6 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
   List radiocode = [];
 
   Orderhis() async {
-    print("object");
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
     //  await prefs.setStringList("serialno", ["VWZ1Z2N1130260"]);

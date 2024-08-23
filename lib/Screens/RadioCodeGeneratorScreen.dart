@@ -57,7 +57,6 @@ class _RadioCodeGeneratorScreenState extends State<RadioCodeGeneratorScreen> {
 
   @override
   void initState() {
-    print("titleprint  ${widget.title}");
     // TODO: implement initState
     // _timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
     //   if (_currentPage < radiohelp[widget.title].length) {
@@ -65,7 +64,6 @@ class _RadioCodeGeneratorScreenState extends State<RadioCodeGeneratorScreen> {
     //   } else {
     //     _currentPage = 0;
     //   }
-    //   print("_currentPage $_currentPage ${radiohelp[widget.title].length}");
     //   // _pageController.animateToPage(
     //   //   _currentPage,
     //   //   duration: Duration(milliseconds: 350),

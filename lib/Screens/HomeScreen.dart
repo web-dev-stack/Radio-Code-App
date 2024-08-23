@@ -71,7 +71,6 @@ class _HomeScreenState extends State<HomeScreen> {
   List brand=[];
 
   Future<Carmodal?>   getcar()async{
-    print("apicall");
   var headers = {
     'Accept': 'application/json'
   };
@@ -86,13 +85,11 @@ class _HomeScreenState extends State<HomeScreen> {
 setState(() {
   isLoading = false;
 });
-    print("object ${brand} ${request.statusCode}");
   }
   else {
     setState(() {
       isLoading = false;
     });
-  print(request.reasonPhrase);
   }
 
 }
@@ -300,7 +297,6 @@ crossAxisSpacing: 20,
                   indexs=brand[index]['id'];
                   setState(() {});
                   Future.delayed(const Duration(seconds: 1),(){
-                    debugPrint("=======${brand[index]['id']}  -  ${brand[index]['amount'].toString()} - ${brand[index]['title']}");
                     Navigator.push(
                       context,
                       MaterialPageRoute(

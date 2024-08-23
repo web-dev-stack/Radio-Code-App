@@ -1,7 +1,0 @@
-package com.stormdeve.car_radio
-
-import io.flutter.embedding.android.FlutterActivity
-import io.flutter.embedding.android.FlutterFragmentActivity
-
-class MainActivity: FlutterFragmentActivity() {
-}

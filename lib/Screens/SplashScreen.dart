@@ -41,7 +41,6 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<Carmodal?>  getcar()async{
-    print("apicall");
     var headers = {
       'Accept': 'application/json'
     };
@@ -76,13 +75,11 @@ class _SplashScreenState extends State<SplashScreen> {
         });
       }
 
-      print("object ${brand} ${request.statusCode}");
     }
     else {
       setState(() {
         isLoading = false;
       });
-      print(request.reasonPhrase);
     }
 
   }
